@@ -35,7 +35,7 @@ namespace CrudFutebol.Repository
                 try
                 {
                     con.Open();
-                    var query = "INSERTO INTO Jogador(Id, Nome, Posicao) VALUES (@Id, @Nome, @Posicao); SELECT CAST(SCOPE_IDENTITY() as INT);";
+                    var query = "INSERT INTO Jogador(Id, Nome, Posicao) VALUES (@Id, @Nome, @Posicao); SELECT CAST(SCOPE_IDENTITY() as INT);";
                     count = con.Execute(query, jogador);
                 }
                 catch (Exception ex)
